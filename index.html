@@ -1,52 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Welcome</title>
+    <style>
+      /* CSS styles for the splash screen */
+      .splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image:  radial-gradient(759px at 14% 22.3%, rgb(10, 64, 88) 0%, rgb(15, 164, 102) 90%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        transition: opacity 1s;
+      }
+
+      .splash-screen.fade-out {
+        opacity: 0;
+      }
+    </style>
   </head>
-
   <body>
-    <div class="app-title">
-      <h1>Wasteman Attendance App</h1>
-     
+    <div class="splash-screen">
+      <!-- <img src="wastemangh.jpg" alt="" srcset=""> -->
+      <h1>Loading...</h1>
     </div>
-    <form action="#" method="POST">
-      <h2>Welcome Back !</h2>
 
-      <label for="username"> <i class="fa-solid fa-user"></i>  Staff ID</label>
-      <input
-        type="text"
-        name="username"
-        id="username"
-        placeholder="Username"
-        required
-      />
-      
-
-      
-
-      <select name="role" id="role">
-        <option value="initial"> Select Company Role</option>
-        <option value="adminassist">Administrative Assistant</option>
-        <option value="fieldworker">Field Worker</option>
-        <option value="ceo">Cheif Executive Officer</option>
-        <option value="ceo">Administrator</option>
-        <option value="ceo">Intern</option>
-      </select>
-
-
-    <input type="button" value="Get My Location" id="location" required>
-     
-      <div class="btns">
-        <button id="check-out">Check out  <i class="fa-solid fa-right-to-bracket"></i></button>
-        <button id="check-in">Check in  <i class="fa-solid fa-arrow-left"></i></i></button>
-      </div>
-
-    </form>
+    <script>
+      // JavaScript code to control the splash screen behavior and redirect after a delay
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.querySelector(".splash-screen").classList.add("fade-out");
+          setTimeout(function () {
+            window.location.href = "index.html"; // Redirect to the target page
+          }, 1500); // 1000 milliseconds (1 second) delay before redirection
+        }, 3000); // 2000 milliseconds (2 seconds) delay before fading out
+      });
+    </script>
   </body>
-  <script src="app.js">
-
-  </script>
 </html>
