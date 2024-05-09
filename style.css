@@ -265,12 +265,13 @@ background-color: green;
     }
     form #location{
         font-size: 14px;
+        border-radius: 5px;
     }
     form .btns button{
         font-size: 12px;
         padding: 13px 5px;
         border-radius: 2px;
-        height: 60px;
+       
     }
 }
 
