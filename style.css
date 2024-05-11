@@ -1,317 +1,310 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
-:root{
-    --company-color: radial-gradient(759px at 14% 22.3%, rgb(10, 64, 88) 0%, rgb(15, 164, 102) 90%);
-    --secondary-color: #fff;
-    --outline-color: rgba(11, 55, 11, 0.962);
-    --bottle-green: rgb(4, 103, 62);
+:root {
+  --company-color: radial-gradient(
+    759px at 14% 22.3%,
+    rgb(10, 64, 88) 0%,
+    rgb(15, 164, 102) 90%
+  );
+  --secondary-color: #fff;
+  --outline-color: rgba(11, 55, 11, 0.962);
+  --bottle-green: rgb(4, 103, 62);
 }
 
-*{
+* {
   box-sizing: border-box;
-  font-family: 'Poppins',"system-ui", sans-serif;  
+  font-family: "Poppins", "system-ui", sans-serif;
   margin: 0;
   padding: 0;
   transition: 0.5s ease-in-out;
 }
-body{
-    width: 100%;
-    height: 100vh;
+body {
+  width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   gap: 60px;
   justify-content: center;
-  background-image:var(--company-color);
+  background-image: var(--company-color);
   padding: 0 100px;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 50%;
+  font-size: 20px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  width: 40%;
+  border-radius: 10px;
+  padding: 50px 30px;
+  justify-content: center;
  
- 
+
+  /* align-items: center; */
+}
+form label {
+  font-size: 14px;
+}
+form h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: black;
+}
+form input {
+  margin-bottom: 5px;
+  height: 40px;
+  width: 100%;
+
+  font-size: 16px;
+  padding-left: 10px;
+  outline-color: var(--outline-color);
 }
 
-.app-title{
+#location-bar {
     display: flex;
-    flex-direction: column-reverse;
-   width: 50%;
-   font-size: 20px;
-   text-align: center;
-   color: var(--secondary-color);
-}
-
-
-form{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--secondary-color);
-    width: 40%;
-    border-radius: 10px;
-    padding: 50px 30px;
-    justify-content: center;
-   
-    
-    /* align-items: center; */
-   
-}
-form label{
-    font-size: 14px;
-}
-form h2{
-    text-align: center;
-    width: 100%;
-    margin-bottom: 30px;
-    font-size: 28px;
-    color: black;
-}
-form input{
-    margin-bottom: 22px;
     height: 40px;
-    width: 100%;
-   
-    font-size: 16px;
-    padding-left: 10px;
-    outline-color:var(--outline-color);
-}
-form input::placeholder{
-    font-size:14px ;
-}
-form #role{
-  height: 40px
-  
- 
- 
-}
-form select option{
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-form #location{
- background-color:var(--bottle-green);
- border: none;
- margin: 20px 0;
- color: var(--secondary-color);
- text-align: center;
- height: 40px;
- display: flex;
- justify-content: center;
- align-items: center;
- border-radius: 5px;
- gap: 5px;
- cursor: pointer;
- transition: 500ms ease-in-out;
-}
-form #location:hover{
-    background-color: var(--outline-color);
-}
-
-form .btns{
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    gap: 20px;
-    
-}
-form .btns button{
-    padding: 10px;
-    width: 50%;
-    border: none;
-    font-size: 16px;
-    border-radius: 5px;
-    display: flex;
-    gap: 10px;
+    font-size: 14px;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-  
-  
-}
-form #check-out{
-    color: var(--secondary-color);
-    background-color: black;
-  
+    border: 1px solid green;
+    color: var(--bottle-green);
+    font-style: italic;
+  }
 
-}
-form #check-out:hover{
-    background-color: rgb(213, 5, 5);
-    transition: 500ms ease-in-out;
-}
-form #check-in{
-    color: var(--secondary-color);
-    background-color: rgb(8, 69, 8);
-    transition: 500ms ease-in-out;
-}
-form #check-in:hover{
-background-color: green;
+form input::placeholder {
+  font-size: 14px;
 }
 
+form select option {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+form #location {
+  background-color: var(--bottle-green);
+  border: none;
+  margin: 10px 0;
+  color: var(--secondary-color);
+  text-align: center;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  gap: 5px;
+  cursor: pointer;
+  transition: 500ms ease-in-out;
+}
+form #location:hover {
+  background-color: var(--outline-color);
+}
+
+form .btns {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  gap: 20px;
+}
+form .btns button {
+  padding: 10px;
+  width: 50%;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+form #check-out {
+  color: var(--secondary-color);
+  background-color: black;
+}
+form #check-out:hover {
+  background-color: rgb(213, 5, 5);
+  transition: 500ms ease-in-out;
+}
+form #check-in {
+  color: var(--secondary-color);
+  background-color: rgb(8, 69, 8);
+  transition: 500ms ease-in-out;
+}
+form #check-in:hover {
+  background-color: green;
+}
 
 /* media queries */
 
-
-
-@media (min-width:1024px) {
-    
-    body{
-        padding: 0 70px;
-    }
-    form{
-        width: 40%;
-        padding: 50px 10px;
-    }
-    form h2{
-        font-size: 30px;
-    }
-    form input{
-        height: 50px;
-        outline-color: var(--outline-color);
-    }
-    form input::placeholder{
-        font-size: 16px;
-    }
-    form #role {
-        height: 50px;
-    }
-    form #location{
-        font-size: 17px;
-        height: 50px;
-    }
-    form .btns button{
-        padding: 15px;
-    }
-    form .btns{
-        margin-bottom: 30px;
-    }
+@media (min-width: 1024px) {
+  body {
+    padding: 0 70px;
+  }
+  form {
+    width: 40%;
+    padding: 50px 10px;
+  }
+  form h2 {
+    font-size: 30px;
+  }
+  form input {
+    height: 50px;
+    outline-color: var(--outline-color);
+  }
+  form input::placeholder {
+    font-size: 16px;
+  }
+  form #role {
+    height: 50px;
+  }
+  form #location {
+    font-size: 17px;
+    height: 50px;
+  }
+  form .btns button {
+    padding: 15px;
+  }
+  form .btns {
+    margin-bottom: 30px;
+  }
 }
-@media (min-width:768px){
-  
-    body{
-        padding: 50px 50px;
-        width: 100%;
-        height: 100vh;
-    }
-    .app-title {
-        width: 40%;
-        font-size: 12px;
-    }
-    form{
-        padding: 20px 20px;
-        width: 60%;
-    }
-    form h2{
-        font-size:20px ;
-    }
-    form input{
-        outline-color: var(--outline-color);
-    }
-}
-@media screen and (max-width:425px) {
-    
-    body{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        overflow-y: scroll;
-        padding: 40px 0;
-    }
-    .app-title{
-        width: 100%;
-        font-size: 12px;
-    }
-    form{
-        width: 90%;
-    }
-    form input{
-        outline-color: var(--outline-color);
-    }
-}
-@media (max-width:375px){
-  body{
+@media (min-width: 768px) {
+  body {
+    padding: 50px 50px;
     width: 100%;
-    padding: 30px 0px;
+    height: 100vh;
   }
-  
-    .app-title{
-    width: 90%;
-    font-size: 10px;
-    
+  .app-title {
+    width: 40%;
+    font-size: 12px;
   }
-  form{
-    margin-top: -20px;
+  form {
+    padding: 20px 20px;
+    width: 60%;
   }
-  form input{
+  form h2 {
+    font-size: 20px;
+  }
+  form input {
     outline-color: var(--outline-color);
   }
 }
-@media (max-width:320px){
-    form{
-        width: 95%;
-        margin-top: -15px;
-    }
-    .app-title{
-        width: 95%;
-        font-size: 10px;
-    }
-    form h2{
-        font-size: 20px;
-    }
-    form input{
-        outline-color: var(--outline-color);
-        height: 60px;
-    }
-    form label{
-        font-size: 12px;
-    }
-    form #location{
-        font-size: 14px;
-        border-radius: 5px;
-    }
-    form .btns button{
-        font-size: 12px;
-        padding: 13px 5px;
-        border-radius: 2px;
-       
-    }
+@media screen and (max-width: 425px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 40px 0;
+  }
+  .app-title {
+    width: 100%;
+    font-size: 12px;
+  }
+  form {
+    width: 90%;
+  }
+  form input {
+    outline-color: var(--outline-color);
+  }
+}
+@media (max-width: 375px) {
+  body {
+    width: 100%;
+    padding: 30px 0px;
+  }
+
+  .app-title {
+    width: 90%;
+    font-size: 10px;
+  }
+  form {
+    margin-top: -20px;
+  }
+  form input {
+    outline-color: var(--outline-color);
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 372px) {
+  form {
+    width: 95%;
+    margin-top: -15px;
+  }
+  .app-title {
+    width: 95%;
+    font-size: 10px;
+  }
+  form h2 {
+    font-size: 20px;
+  }
+  form input {
+    outline-color: var(--outline-color);
+    height: 60px;
+  }
+  form label {
+    font-size: 12px;
+  }
+  form #location {
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  form .btns button {
+    font-size: 12px;
+    padding: 13px 5px;
+    border-radius: 2px;
+  }
+ 
 }
 
-@media screen and (min-width: 426px) and (max-width: 767px){
-    body{
-        width: 100%;
-        height: 100%;
-        overflow-y: scroll;
-        display: flex;
-        flex-direction: column;
-        padding: 30px 20px;
-    }
-    .app-title{
-        width: 95%;
-        font-size: 15px;
-    }
-    form{
-        width: 95%;
-    }
-    form input{
-        outline-color: var(--outline-color);
-    }
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  body {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  .app-title {
+    width: 95%;
+    font-size: 15px;
+  }
+  form {
+    width: 95%;
+  }
+  form input {
+    outline-color: var(--outline-color);
+  }
 }
-@media screen and (min-width:1025px) and (max-width: 1441px) {
-    body{
-        width: 100%;
-        height: 100vh;
-       
-        /* display: none; */
-    }
-    .app-title{
-        width: 40%;
-        font-size: 21px;
-    }
-    form{
-     width: 40%; 
-     padding: 60px 20px;
-    }
-    form input{
-        outline-color: var(--outline-color);
-    }
-    
+@media screen and (min-width: 1025px) and (max-width: 1441px) {
+  body {
+    width: 100%;
+    height: 100vh;
+
+    /* display: none; */
+  }
+  .app-title {
+    width: 40%;
+    font-size: 21px;
+  }
+  form {
+    width: 40%;
+    padding: 60px 20px;
+  }
+  form input {
+    outline-color: var(--outline-color);
+  }
 }
