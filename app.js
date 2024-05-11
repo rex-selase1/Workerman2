@@ -3,10 +3,21 @@ const username = document.getElementById("username");
 const checkInBtn = document.getElementById("check-in");
 const checkOutBtn = document.getElementById("check-out");
 const getMyLocationBtn = document.getElementById("location");
+const form = document.getElementById("form");
+
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+})
 
 
 function getUserLocation() {
+
+
+    
   const success = (position) => {
+
+    getMyLocationBtn.innerHTML = "please wait...";
 
     const locationBar = document.getElementById("location-bar");
 
@@ -22,7 +33,10 @@ function getUserLocation() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data.city);
-       locationBar.innerHTML = `youre working from "${data.city}"`;
+        locationBar.style.border = "1px solid green";
+        locationBar.style.borderStyle = "dashed";
+       locationBar.innerHTML = `you're working from "${data.city}"`;
+       getMyLocationBtn.innerHTML = "Get My Location";
        
       });
       
@@ -38,7 +52,10 @@ function getUserLocation() {
 
 
 
-getMyLocationBtn.addEventListener("click", getUserLocation);
+// getMyLocationBtn.addEventListener("click", getUserLocation);
+
+window.addEventListener("load", getUserLocation);
+
 checkInBtn.addEventListener("click", () => {
   checkInBtn.disabled = true;
   checkOutBtn.disabled = true;

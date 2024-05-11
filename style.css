@@ -78,7 +78,8 @@ form input {
     font-size: 14px;
     align-items: center;
     justify-content: center;
-    border: 1px solid green;
+   border-radius: 2px ;
+   ;
     color: var(--bottle-green);
     font-style: italic;
   }
