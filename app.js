@@ -55,6 +55,7 @@ function getUserLocation() {
 // getMyLocationBtn.addEventListener("click", getUserLocation);
 
 window.addEventListener("load", getUserLocation);
+getMyLocationBtn.addEventListener("click", getUserLocation);
 
 checkInBtn.addEventListener("click", () => {
   checkInBtn.disabled = true;
