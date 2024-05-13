@@ -79,7 +79,7 @@ form input {
     align-items: center;
     justify-content: center;
    border-radius: 2px ;
-   ;
+   padding: 5px 10px;
     color: var(--bottle-green);
     font-style: italic;
   }
