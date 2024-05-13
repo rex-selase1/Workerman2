@@ -30,7 +30,7 @@ function getUserLocation() {
         
         locationBar.style.border = "1px solid green";
         locationBar.style.borderStyle = "dashed";
-        locationBar.innerHTML = `you're working from "${data.locality}"`;
+        locationBar.innerHTML = `you're working from "${data.city}"`;
         getMyLocationBtn.innerHTML = "Get My Location";
       });
   };
